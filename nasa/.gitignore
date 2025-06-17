@@ -1,0 +1,8 @@
+*.o
+TRQC_load_trqc
+TRQC_nasa_build_from_bin
+TRQC_print_getSerie
+TRQC_time_accessQuery
+TRQC_time_getSerieQuery
+TRQC_time_windowQuery
+ts_build_nasa_to_bin
