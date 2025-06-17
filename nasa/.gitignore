@@ -6,3 +6,4 @@ TRQC_time_accessQuery
 TRQC_time_getSerieQuery
 TRQC_time_windowQuery
 ts_build_nasa_to_bin
+temp_data/

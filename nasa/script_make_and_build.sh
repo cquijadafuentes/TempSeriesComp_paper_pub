@@ -1,20 +1,19 @@
 #!/bin/bash
 
+echo "compiling..."
+make all
+echo "done"
+
+
+echo "building test"
 INPUT_FOLDER="./demo_data/"
 LISTFILE="input_test_TMP.txt"
-
 mkdir "temp_data"
 OUTPUT_FOLDER="./temp_data/"
+cd demo_data
+../TRQC_nasa_to_bin input_test_TMP.txt ../temp_data/TMP.bin
+cd ../
+./TRQC_nasa_build_from_bin temp_data/TMP.bin 3 temp_data/TMP.trqc 
+echo "done"
 
-
-pwd >> ${OUTPUTFILE}
-echo "ACCESS QUERY" >> ${OUTPUTFILE}
-echo "" >> ${OUTPUTFILE}
-
-for filename in APCP CAPE CONVfrac DLWRF DSWRF PEVAP PRES SPFH TMP UGRD VGRD
-do
-	${EXEC} ${DATAFOLDER}${filename}.qc04 ${QUERYFILE} ${REPETICIONES} >> ${OUTPUTFILE}
-done
-
-echo "Fecha FIN ejecución: $(date +'%Y/%m/%d %H:%M:%S')" >> ${OUTPUTFILE}
 exit 0
