@@ -1,0 +1,3 @@
+*.o
+TRQC_eeg_build_from_bin
+temp_data/
