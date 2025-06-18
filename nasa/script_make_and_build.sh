@@ -16,4 +16,6 @@ cd ../
 ./TRQC_nasa_build_from_bin temp_data/TMP.bin 3 temp_data/TMP.trqc 
 echo "done"
 
+echo "end"
+
 exit 0
